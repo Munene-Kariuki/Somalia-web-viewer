@@ -91,12 +91,14 @@ class SCMap extends Component {
       if (window.mapControls.fullScreen) controls.push(new FullScreen());
       if (window.mapControls.rotate) controls.push(new Rotate());
 
+      console.log(centerCoords)
       var map = new Map({
         controls: defaultControls().extend(controls.concat([])),
         layers: [],
         target: "map",
         view: new View({
-          center: centerCoords,
+          center:       {0: "226252.18",
+          1: "535381.10"},
           zoom: defaultZoom,
           maxZoom: window.config.maxZoom,
           //resolutions: resolutions

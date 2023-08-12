@@ -59,7 +59,7 @@ class TOCListView extends Component {
 					</div>
 				</div>
 				<div>
-					<Layers
+					{/* <Layers
 						key={this.props.id + "-layers"}
 						id={this.props.id + "-layers"}
 						ref={(ref) => {
@@ -74,7 +74,7 @@ class TOCListView extends Component {
 						onLayerChange={this.props.onLayerChange}
 						onSortMove={this.props.onSortMove}
 						onSortEnd={this.props.onSortEnd}
-					/>
+					/> */}
 				</div>
 			</div>
 		);

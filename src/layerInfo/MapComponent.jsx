@@ -35,7 +35,7 @@ class MapComponent extends Component {
 
 	componentDidMount() {
 		// TWEEK TO CENTER MAP DEPENDING ON MODE
-		const centerCoords = [-8875141.45, 5543492.45];
+		const centerCoords = [-1.68325, 40.98105];
 
 		var map = new Map({
 			controls: defaultControls().extend([scaleLineControl, new FullScreen()]),
@@ -54,10 +54,10 @@ class MapComponent extends Component {
 		window.map = map;
 
 		// CREATE EXTENT
-		//var extent = [minlon, minlat, maxlon, maxlat];
-		// var extent = [-8969156.9680, 5382677.0565, -8765834.4727, 5702183.8348];
-		// var polygon = PolygonFromExtent(extent);
-		// var bufferPolygon = BufferExtent(extent, 5000);
+		var extent = [minlon, minlat, maxlon, maxlat];
+		var extent = [40.98105, -1.68325, 51.13387, 12.02464];
+		var polygon = PolygonFromExtent(extent);
+		var bufferPolygon = BufferExtent(extent, 5000);
 		var polygon = PolygonFromExtent(this.props.extent);
 		var bufferPolygon = BufferExtent(this.props.extent, 5000);
 		var feature = new Feature(polygon);

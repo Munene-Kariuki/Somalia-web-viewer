@@ -119,7 +119,7 @@ export function isMobile() {
 }
 
 // SHOW CONTENT WINDOW
-export function showWindow(contents, options = { title: "Information", showFooter: false, mode: "normal", hideScroll: false }) {
+export function showWindow(contents, options = { title: "information", showFooter: false, mode: "normal", hideScroll: false }) {
   ReactDOM.render(
     <ShowWindow key={shortid.generate()} title={options.title} mode={options.mode} showFooter={options.showFooter} contents={contents} hideScroll={options.hideScroll} style={options.style} />,
     document.getElementById("map-modal-window")

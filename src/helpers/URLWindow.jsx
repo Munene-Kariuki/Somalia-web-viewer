@@ -111,7 +111,7 @@ class URLWindow extends Component {
 		return (
 			<div id="sc-url-window-container" className={className}>
 				<div className="sc-url-window-header">
-					<div className="sc-url-window-header-title">Information</div>
+					<div className="sc-url-window-header-title">Test</div>
 					<div className="sc-url-window-header-popout-button" title="Open New Window">
 						<button className="sc-button sc-button-blue sc-url-window-header-button" onClick={this.onPopoutClick}>
 							<img src={images["new-window.png"]} alt="new window" />

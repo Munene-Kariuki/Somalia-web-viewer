@@ -14,7 +14,7 @@ class BMap extends Component {
 
 
     componentDidMount() {
-		helpers.waitForLoad("settings", Date.now(), 30, () => {
+		helpers.waitForLoad("settings", Date.now(), 20, () => {
 			
          const basemap = (window.config.baseMapType !== undefined)
          ? window.config.baseMapType

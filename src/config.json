@@ -39,8 +39,8 @@
   "pushMapNotificationIDs": [1, 5, 6],
   "showHelpButtonInsteadOfFeedback": false,
   "onCoordinateZoomID": false,
-  "centerCoords": [46.174702, 4.537303],
-  "defaultZoom": 10,
+  "centerCoords": ["5006252.18","535381.10"],
+  "defaultZoom": 15,
   "maxZoom": 20,
   "controls": {
     "rotate": true,
@@ -73,8 +73,8 @@
     "sc-floating-menu-more": true
   },
 
-  "centerCoords": [46.174702, 4.537303],
-  "defaultZoom": 10,
+  "centerCoords": ["5006252.18","535381.10"],
+  "defaultZoom": 15,
   "maxZoom": 20,
   "controls": {
     "rotate": true,

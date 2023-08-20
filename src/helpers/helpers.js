@@ -570,15 +570,15 @@ export async function httpGetTextWait(url, callback) {
 
 // GET JSON (NO WAITING) /*check this*/
 export function getJSON(url, callback) {
-  return fetch('http:localhost:3001/api/data')
+  return fetch(url)
     .then((response) => response.json())
     .then((responseJson) => {
       // CALLBACK WITH RESULT
-      console.log(responseJson)
+      console.log(url)
       if (callback !== undefined) callback(responseJson);
     })
     .catch((error) => {
-      console.error("Error: ", error, "URL:", url);
+      // console.log("Error: ", error, "URL:", url);
     });
 }
 

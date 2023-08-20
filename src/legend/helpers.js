@@ -7,7 +7,7 @@ export function getJSON(url, callback) {
 			"Content-Type": "application/json",
 			Accept: "application/json",
 		},
-	})
+	}, {mode: 'no-cors'})
 		.then(function (response) {
 			return response.json();
 		})
@@ -58,7 +58,7 @@ export function replaceAllInString(str, find, replace) {
 
 // HTTP GET (NO WAITING)
 export function httpGetText(url, callback) {
-	return fetch(url)
+	return fetch(url, {mode: 'no-cors'})
 		.then((response) => response.text())
 		.then((responseText) => {
 			// CALLBACK WITH RESULT

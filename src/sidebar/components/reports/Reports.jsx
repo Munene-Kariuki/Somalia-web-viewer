@@ -8,7 +8,7 @@ class Reports extends Component {
 			return (
 				<p className="sc-reports-tab-init">
 					There is currently no report generated. <br></br>
-					Please click on a property to generate a property report.
+					Please click on a JPP activity to generate a report.
 				</p>
 			);
 

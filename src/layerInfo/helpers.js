@@ -1,7 +1,7 @@
 import shortid from "shortid";
 
 export async function httpGetTextWait(url, callback) {
-  let data = await fetch(url)
+  let data = await fetch(url, {mode: 'no-cors'})
     .then((response) => {
       const resp = response.text();
       //console.log(resp);
@@ -17,7 +17,7 @@ export async function httpGetTextWait(url, callback) {
   return data;
 }
 export function httpGetText(url, callback) {
-  return fetch(url)
+  return fetch(url, {mode: 'no-cors'})
     .then((response) => response.text())
     .then((responseText) => {
       // CALLBACK WITH RESULT
@@ -31,7 +31,7 @@ export function httpGetText(url, callback) {
 
 // GET JSON (NO WAITING)
 export function getJSON(url, callback) {
-  return fetch(url)
+  return fetch(url, {mode: 'no-cors'})
     .then((response) => response.json())
     .then((responseJson) => {
       // CALLBACK WITH RESULT

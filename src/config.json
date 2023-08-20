@@ -40,7 +40,7 @@
   "showHelpButtonInsteadOfFeedback": false,
   "onCoordinateZoomID": false,
   "centerCoords": ["5006252.18","535381.10"],
-  "defaultZoom": 15,
+  "defaultZoom": 6,
   "maxZoom": 20,
   "controls": {
     "rotate": true,
@@ -74,7 +74,7 @@
   },
 
   "centerCoords": ["5006252.18","535381.10"],
-  "defaultZoom": 15,
+  "defaultZoom": 6,
   "maxZoom": 20,
   "controls": {
     "rotate": true,
@@ -208,13 +208,6 @@
 
   "sidebarToolComponents": [
     {
-      "id": 1,
-      "name": "Measure",
-      "componentName": "Measure",
-      "description": "This tool will allow for the measurement of distance and areas in various units.",
-      "imageName": "measure.png"
-    },
-    {
       "id": 2,
       "name": "Coordinates",
       "componentName": "Coordinates",
@@ -244,34 +237,6 @@
       "imageName": "searchAddresses.png"
     },
     {
-      "id": 5,
-      "name": "Search History",
-      "componentName": "SearchHistory",
-      "description": "This tool provides users with a list of their 25 most recent searches.",
-      "imageName": "searchHistory.png"
-    },
-    {
-      "id": 6,
-      "name": "Lot And Concession",
-      "componentName": "LotAndConcession",
-      "description": "This tool allows you to search Lot and Concessions.",
-      "imageName": "lotAndConcession.png"
-    },
-    {
-      "id": 7,
-      "name": "External Services (Street View)",
-      "componentName": "ExternalServices",
-      "description": "This tool links a map location to many other External Map Services.",
-      "imageName": "externalServices.png"
-    },
-    {
-      "id": 8,
-      "name": "Weather",
-      "componentName": "Weather",
-      "description": "Radar and Weather forecast from Environment Canada.",
-      "imageName": "weather.png"
-    },
-    {
       "id": 10,
       "name": "Settings",
       "componentName": "Settings",
@@ -283,87 +248,32 @@
   "sidebarThemeComponents": [
     {
       "id": 1,
-      "name": "Solid Waste Facilities",
-      "componentName": "SolidWasteFacilities",
-      "description": "Provides information about waste facilities, and information as to where to purchase bag tags.",
-      "imageName": "solidWasteFacilities.png",
-      "config": "./configSolidWasteFacilities.json"
-    },
-    {
-      "id": 2,
-      "name": "Forestry",
-      "componentName": "Forestry",
-      "description": "View County Forests and Recreation features, conservation, provincial and municipal parks.",
-      "imageName": "forestry.png",
-      "config": "./configForestry.json"
-    },
-    {
-      "id": 3,
-      "name": "Local Real Estate",
-      "componentName": "LocalRealEstate",
-      "description": "View listings by categories and view photos for the listing with the option to link to the Realtor.ca listing",
-      "imageName": "localrealestate.png"
-    },
-    {
-      "id": 4,
-      "name": "Road Construction",
-      "componentName": "RoadConstruction",
-      "description": "View this year's road and bridge construction locations.",
-      "imageName": "roadsConstruction.png",
-      "disable": true
+      "name": "Current JPP programs",
+      "componentName": "ChildCareFacilities",
+      "description": "Provides information about current JPP programs",
+      "imageName": "solidWasteFacilities.png"
     },
     {
       "id": 5,
-      "name": "Child Care Facilities",
-      "componentName": "ChildCareFacilities",
-      "description": "Provide users with a list of Child care facilities as well as additional information about each facility.",
-      "imageName": "childCareFacilities.png",
-      "secure": false
-    },
-    {
-      "id": 6,
-      "name": "Immigration Services",
-      "componentName": "ImmigrationServices",
-      "description": "Explore resources to help newcomers to the County.",
-      "imageName": "immigrationServices.png",
-      "secure": false
+      "name": "Police station facilities",
+      "componentName": "Forestry",
+      "description": "Provides information on current police stations where JPP Activities are being carried out.",
+      "imageName": "childCareFacilities.png"
     },
     {
       "id": 7,
-      "name": "Commercial Real Estate",
-      "componentName": "CommercialRealEstate",
-      "description": "Search commercial real estate throughout the County of Simcoe.",
+      "name": "Rubric assessments",
+      "componentName": "RoadConstruction",
+      "description": "Provides information on the systematic assessment  conducted across the five federal member states and the federal level. It shows the results of approximately 50+ indicators in order to classify police service performance (i.e non-existent, emerging, developed, advanced) across eight different criteria.",
       "imageName": "commercialRealEstate.png"
     },
     {
       "id": 8,
-      "name": "211 Community Services",
-      "componentName": "TwoOneOne",
-      "description": "Explore 211 Community Services across the County of Simcoe.",
-      "imageName": "211communityServices.png"
-    },
-    {
-      "id": 9,
-      "name": "Zoning",
-      "componentName": "Zoning",
-      "description": "",
-      "imageName": "zoning.png",
-      "disable": true
-    },
-    {
-      "id": 10,
-      "name": "Broadband",
-      "componentName": "Broadband",
-      "description": "",
-      "imageName": "broadband_icon.png",
-      "disable": true
-    },
-    {
-      "id": 11,
-      "name": "511 Live Feeds",
-      "componentName": "Five11LiveFeeds",
-      "description": "View Live Feeds from the MTO and Waze.",
-      "imageName": "511.png"
+      "name": "Incidents and violations",
+      "componentName": "SolidWasteFacilities",
+      "description": "This shows the Locations of different human rights related incidents and violations by JPP supported police officers.",
+      "imageName": "211communityServices.png",
+      "config": "./configSolidWasteFacilities.json"
     }
   ],
   "sidebarShortcutParams": [
@@ -371,7 +281,7 @@
       "id": 1,
       "url_param": "BAGTAG",
       "type": "themes",
-      "component": "Solid Waste Facilities"
+      "component": "Current programs"
     },
     {
       "id": 2,

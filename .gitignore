@@ -31,3 +31,8 @@ debug.log
 *.zip
 sc_copyToServer.bat
 Build.ps1
+
+#Firebase
+.firebase
+.firebaserc
+firebase.json

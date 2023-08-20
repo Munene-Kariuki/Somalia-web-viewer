@@ -382,9 +382,9 @@ export function getVectorTileLayer(url) {
   let rootPath = url + "/resources/styles/root.json";
   let spritePath = url + "/resources/sprites/sprite.json";
   let pngPath = url + "/resources/sprites/sprite.png";
-  fetch(rootPath).then(function (response) {
+  fetch(rootPath, {mode: 'no-cors'}).then(function (response) {
     response.json().then(function (glStyle) {
-      fetch(spritePath).then(function (response) {
+      fetch(spritePath, {mode: 'no-cors'}).then(function (response) {
         response.json().then(function (spriteData) {
           stylefunction(layer, glStyle, "esri", undefined, spriteData, pngPath);
         });
@@ -522,7 +522,7 @@ export function getURLParameter(parameterName, decoded = true, caseSensitive = f
 
 // HTTP GET (NO WAITING)
 export function httpGetText(url, callback) {
-  return fetch(url)
+  return fetch(url, {mode: 'no-cors'})
     .then((response) => response.text())
     .then((responseText) => {
       // CALLBACK WITH RESULT
@@ -537,7 +537,7 @@ export function httpGetText(url, callback) {
 
 // HTTP GET (NO WAITING)
 export function httpGetTextWithParams(url, params = undefined, callback) {
-  return fetch(url, params)
+  return fetch(url, params, {mode: 'no-cors'})
     .then((response) => response.text())
     .then((responseText) => {
       // CALLBACK WITH RESULT
@@ -552,7 +552,7 @@ export function httpGetTextWithParams(url, params = undefined, callback) {
 
 // HTTP GET WAIT
 export async function httpGetTextWait(url, callback) {
-  let data = await fetch(url)
+  let data = await fetch(url, {mode: 'no-cors'})
     .then((response) => {
       const resp = response.text();
       //console.log(resp);
@@ -568,12 +568,13 @@ export async function httpGetTextWait(url, callback) {
   return data;
 }
 
-// GET JSON (NO WAITING)
+// GET JSON (NO WAITING) /*check this*/
 export function getJSON(url, callback) {
-  return fetch(url)
+  return fetch('http:localhost:3001/api/data')
     .then((response) => response.json())
     .then((responseJson) => {
       // CALLBACK WITH RESULT
+      console.log(responseJson)
       if (callback !== undefined) callback(responseJson);
     })
     .catch((error) => {
@@ -583,7 +584,7 @@ export function getJSON(url, callback) {
 
 // GET JSON (NO WAITING)
 export function getJSONWithParams(url, params = undefined, callback) {
-  return fetch(url, params)
+  return fetch(url, params, {mode: 'no-cors'})
     .then((response) => response.json())
     .then((responseJson) => {
       // CALLBACK WITH RESULT
@@ -595,7 +596,7 @@ export function getJSONWithParams(url, params = undefined, callback) {
 }
 // GET JSON WAIT
 export async function getJSONWaitWithParams(url, params = undefined, callback) {
-  let data = await await fetch(url, params)
+  let data = await await fetch(url, params, {mode: 'no-cors'})
     .then((res) => {
       const resp = res.json();
       //console.log(resp);
@@ -613,7 +614,7 @@ export async function getJSONWaitWithParams(url, params = undefined, callback) {
 }
 // GET JSON WAIT
 export async function getJSONWait(url, callback) {
-  let data = await await fetch(url)
+  let data = await await fetch(url, {mode: 'no-cors'})
     .then((res) => {
       const resp = res.json();
       //console.log(resp);
@@ -631,7 +632,7 @@ export async function getJSONWait(url, callback) {
 }
 
 export function getObjectFromXMLUrl(url, callback) {
-  return fetch(url)
+  return fetch(url, {mode: 'no-cors'})
     .then((response) => response.text())
     .then((responseText) => {
       // CALLBACK WITH RESULT

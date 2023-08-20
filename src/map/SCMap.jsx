@@ -98,8 +98,8 @@ class SCMap extends Component {
         target: "map",
         view: new View({
           center: ["5006252.18", "535381.10"],
-          zoom: defaultZoom,
-          maxZoom: window.config.maxZoom,
+          zoom: 7,
+          maxZoom: 20,
           //resolutions: resolutions
         }),
         interactions: defaultInteractions({

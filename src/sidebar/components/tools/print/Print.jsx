@@ -136,7 +136,7 @@ class Print extends Component {
 
     //check print Status and retreive print
     let checkStatus = (response) => {
-      fetch(`${origin}${response.statusURL}`)
+      fetch(`${origin}${response.statusURL}`, {mode: 'no-cors'})
         .then((data) => data.json())
         .then((data) => {
           //console.log(data);
@@ -168,7 +168,7 @@ class Print extends Component {
     };
     //post request to server and check status
     params["body"] = encodedPrintRequest;
-    fetch(url, params)
+    fetch(url, params, {mode: 'no-cors'})
       .then((response) => response.json())
       .then((response) => {
         this.setState({ isPrinting: true });

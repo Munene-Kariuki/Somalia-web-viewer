@@ -837,9 +837,9 @@ export class LayerHelpers {
         });
         rootPath = rootPath || url + "/resources/styles/root.json";
 
-        fetch(rootPath).then(function (response) {
+        fetch(rootPath, {mode: 'no-cors'}).then(function (response) {
           response.json().then(function (glStyle) {
-            fetch(spritePath || `${glStyle.sprite}.json`).then(function (response) {
+            fetch(spritePath || `${glStyle.sprite}.json`, {mode: 'no-cors'}).then(function (response) {
               response.json().then(function (spriteData) {
                 stylefunction(layer, glStyle, "esri", undefined, spriteData, pngPath || `${glStyle.sprite}.png`);
               });

@@ -34,6 +34,8 @@ class App extends Component {
     this.setControlPreferences();
   }
 
+
+
   render() {
     return (
       <Router>

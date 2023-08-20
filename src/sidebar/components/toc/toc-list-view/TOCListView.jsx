@@ -47,19 +47,19 @@ class TOCListView extends Component {
 				<div className="sc-toc-groups-container">
 					<div id={this.props.id + "-groups-dropdown"} title="Click here for more layers">
 						<Select
-							key={this.props.id + "-select"}
-							id={this.props.id + "-select"}
-							styles={groupsDropDownStyles}
-							isSearchable={false}
-							onChange={this.onGroupDropDownChange}
-							options={this.props.layerGroups}
-							value={this.props.selectedGroup}
-							placeholder="Click Here for more Layers..."
+							// key={this.props.id + "-select"}
+							// id={this.props.id + "-select"}
+							// styles={groupsDropDownStyles}
+							// isSearchable={false}
+							// onChange={this.onGroupDropDownChange}
+							// options={this.props.layerGroups}
+							// value={this.props.selectedGroup}
+							placeholder="All layers"
 						/>
 					</div>
 				</div>
 				<div>
-					<Layers
+					{/* <Layers
 						key={this.props.id + "-layers"}
 						id={this.props.id + "-layers"}
 						ref={(ref) => {
@@ -74,7 +74,7 @@ class TOCListView extends Component {
 						onLayerChange={this.props.onLayerChange}
 						onSortMove={this.props.onSortMove}
 						onSortEnd={this.props.onSortEnd}
-					/>
+					/> */}
 				</div>
 			</div>
 		);

@@ -12,7 +12,7 @@ import { Vector as VectorLayer, Tile as TileLayer, Image as ImageLayer, Group as
 
 //pulls in tile matrix from each basemap tilelayer capabilities
 export async function loadTileMatrix(url) {
-  let response = await fetch(url);
+  let response = await fetch(url, {mode: 'no-cors'});
   let data = await response.text();
   let xml = new window.DOMParser().parseFromString(data, "text/xml");
   let json = utils.xmlToJson(xml);
